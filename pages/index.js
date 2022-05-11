@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import Link from 'next/link';
-import { StyledButton } from '../components/button';
+import Navbar from '../components/navbar';
+import { StyledHeader } from '../components/header';
+import Card from '../components/card';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -10,22 +11,13 @@ const Title = styled.h1`
 export default function Home() {
   return (
     <>
-      <h1>Rick and Morty API Wiki</h1>
-      <StyledButton>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </StyledButton>
-      <StyledButton>
-        <Link href="/characters">
-          <a>Characters</a>
-        </Link>
-      </StyledButton>
-      <StyledButton>
-        <Link href="/episodes">
-          <a>Episode</a>
-        </Link>
-      </StyledButton>
+      <StyledHeader>
+        <h1>Rick and Morty API Wiki</h1>
+      </StyledHeader>
+      <section>
+        <Card></Card>
+      </section>
+      <Navbar></Navbar>
     </>
   );
 }
